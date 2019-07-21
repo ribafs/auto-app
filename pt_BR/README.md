@@ -71,6 +71,10 @@ A paginação básica que utilizei para criar este aplicativo foi encontrada no 
 
 https://www.kodingmadesimple.com/2017/01/simple-ajax-pagination-in-jquery-php-pdo-mysql.html
 
+## Limitações
+
+Este software não comtempla relacionamento entre tabelas nem combos para campos relacionados. Caso precise de um aplicativo com ainda mais recursos crie com o bake do CakePHP.
+
 ## Licença
 
 MIT
