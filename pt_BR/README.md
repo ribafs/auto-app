@@ -31,16 +31,16 @@ https://github.com/ribafs/auto-app
 - E chame pelo navegador com - http://localhost/auto-app
 - Abrirá o formulário para entrada dos dados do banco, como abaixo:
 
-![](assets/images/form.png)
+![](../images/form.png)
 
 - Entre com os dados do banco e com o nome da tabela e clique em Send
 Já estará em frente ao menu com links para todas as tabelas do banco, como a tela abaixo
 
-![](assets/images/menu.png)
+![](../images/menu.png)
 
 Clique em um link para ver o CRUD completo para a tabela selecionada:
 
-![](assets/images/crud.png)
+![](../images/crud.png)
 
 ## Origem
 
