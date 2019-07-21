@@ -1,7 +1,7 @@
 # CRUD Automático
 
 ## In English
-![](../images/en.png) https://github.com/ribafs/auto-crud/README-en.md
+![](../images/en.png) https://github.com/ribafs/auto-app/tree/master/en
 
 Temos apenas duas classes, Connection() e Crud() com bons métodos e os arquivos básicos do CRUD. Você não precisará digitar nenhum nome de campo e nenhuma linha de código. Ele gerará automaticamente o código de um CRUD para cada tabela do banco de dados, não importando quantas sejam.
 
