@@ -9,6 +9,10 @@ Temos apenas duas classes, Connection() e Crud() com bons métodos e os arquivos
 
 https://github.com/ribafs/auto-app
 
+### Download
+
+https://github.com/ribafs/auto-app/archive/master.zip
+
 ## Requisitos:
 
 - PHP (estou usando a 7.2, mas deve funcionar também nas 5.x)
