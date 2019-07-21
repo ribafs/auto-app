@@ -8,5 +8,8 @@ This software automates the creation of simple applications in PHP with good res
 ## In English
 ![](images/en.png) https://github.com/ribafs/auto-app/blob/master/en/README.md
 
+### Download
+https://github.com/ribafs/auto-app/archive/master.zip
+
 ## LICENSE
 MIT
