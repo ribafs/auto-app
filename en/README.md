@@ -10,6 +10,10 @@ It will automatically generate the code of a CRUD for each table in the database
 
 https://github.com/ribafs/auto-app
 
+### Download
+
+https://github.com/ribafs/auto-app/archive/master.zip
+
 ## Requirements:
 
 - PHP (Im using 7.2, but should also work in the 5.x)
