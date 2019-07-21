@@ -1,7 +1,7 @@
 # CRUD Automático
 
 ## In English
-![](images/en.png) https://github.com/ribafs/auto-crud/README-en.md
+![](../images/en.png) https://github.com/ribafs/auto-crud/README-en.md
 
 Temos apenas duas classes, Connection() e Crud() com bons métodos e os arquivos básicos do CRUD. Você não precisará digitar nenhum nome de campo e nenhuma linha de código. Ele gerará automaticamente o código de um CRUD para cada tabela do banco de dados, não importando quantas sejam.
 
@@ -31,16 +31,16 @@ https://github.com/ribafs/auto-app
 - E chame pelo navegador com - http://localhost/auto-app
 - Abrirá o formulário para entrada dos dados do banco, como abaixo:
 
-![](images/form.png)
+![](assets/images/form.png)
 
 - Entre com os dados do banco e com o nome da tabela e clique em Send
 Já estará em frente ao menu com links para todas as tabelas do banco, como a tela abaixo
 
-![](images/menu.png)
+![](assets/images/menu.png)
 
 Clique em um link para ver o CRUD completo para a tabela selecionada:
 
-![](images/crud.png)
+![](assets/images/crud.png)
 
 ## Origem
 
