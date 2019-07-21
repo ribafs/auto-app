@@ -77,6 +77,10 @@ The basic pagination I used to create this application was found at the followin
 
 https://www.kodingmadesimple.com/2017/01/simple-ajax-pagination-in-jquery-php-pdo-mysql.html
 
+## Limitations
+
+This software does not contemplate relationship between tables or combos for related fields. If you need an application with this and even more features create with the CakePHP bake.
+
 ## License
 
 MIT
