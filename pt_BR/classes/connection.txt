@@ -2,7 +2,7 @@
 	public  $pdo;
 	public $regsPerPage = 10; // Registros por página
     public $linksPerPage = 15;
-    public $appName = '<a href="../index.php" title="Voltar ao menu">Aplicativo Automático</a>';
+    public $appName = '<a href="../index.php" title="Voltar ao menu">Aplicativo Automático em PHP</a>';
 
     public function __construct(){
 
