@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Automatic Application</title>
+  <title>Aplicativo Automático em PHP</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,27 +12,27 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1>Automatic Application</h1>
-  <h3>By <a href="https://ribafs.org">RibaFS</a></h3> 
+  <h1>Aplicativo Automático em PHP</h1>
+  <h3>Por <a href="https://ribafs.org">RibaFS</a></h3> 
 </div>
 
 <div class="container">
   <div class="row">
   <div class="col-sm-3"></div>
   <div class="col-sm-6">
-  <h2>Enter your database details</h2>
+  <h2>Entre informações sobre o banco de dados</h2>
   <form method="POST" action="">
     <div class="form-group">
       <input type="text" class="form-control" id="host" name="host" value="localhost" required>
     </div>
     <div class="form-group">
-      <input type="test" class="form-control" id="db" placeholder="Enter database name" name="db" required>
+      <input type="test" class="form-control" id="db" placeholder="Enter nome do banco" name="db" required>
     </div>
     <div class="form-group">
       <input type="text" class="form-control" id="user" name="user" value="root" required>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+      <input type="password" class="form-control" id="pass" placeholder="Entre a senha" name="pass">
     </div>
     <div class="form-group">
       <input type="sgbd" class="form-control" id="sgbd" name="sgbd" value="mysql">
@@ -40,7 +40,7 @@
     <div class="form-group">
       <input type="text" class="form-control" id="port" name="port" value="3306">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
   </div>
 </div>
