@@ -1,16 +1,32 @@
--- Tabelas: clientes, funcionarios, produtos, pedidos
-
-CREATE TABLE IF NOT EXISTS `clientes` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` char(45) NOT NULL,
+  `username` varchar(55) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+);
+
+INSERT INTO `users` (`id`, `username`, `password`, `group_id`, `created`, `modified`) VALUES
+(1,	'super',	'$2y$10$JSDAQhVzicXNOPsiFxSqL.w0tAO6GDCxUMxR.uP3yWMYUTBtv6W8.',	1,	'2016-09-15 15:57:16',	'2019-04-06 09:53:44'),
+(2,	'admin',	'$2y$10$XPWeblQCdPrXIbQzMaBCw.DOHFalF62TH
+ Z8XbwzA3qUgFVZhbZteC',	2,	'2016-09-15 15:57:28',	'2019-04-06 09:54:01'),
+(3,	'manager',	'$2y$10$CuHXN/I.fsDjwDD4eW.bie2P3F4Kvy3Uof18diZwrsshUrK8dmqx2',	3,	'2016-09-15 15:57:39',	'2019-04-06 09:54:15'),
+(4,	'user',	'$2y$10$Dp.70puQvgpsdkIxraND0.vuL8TNRIYLncGQEg6NoCdPJGy0fdXgW',	4,	'2016-09-15 15:58:21',	'2019-04-06 09:54:28');
+
+CREATE TABLE IF NOT EXISTS `customers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(45) NOT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `data_nasc` date DEFAULT NULL,
-  `cpf` char(11) NOT NULL,
+  `birthday` date DEFAULT NULL,
+  `security` char(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `clientes` (`id`, `nome`, `email`, `data_nasc`, `cpf`,`user_id`) VALUES
+INSERT INTO `customers` (`id`, `name`, `email`, `birthday`, `security`,`user_id`) VALUES
 (1, 'Erin Pate Skinner', 'dolor.vitae.dolor@mollisvitaeposuere.ca', '2013-10-07', '74426302285',1),
 (2, 'Leonard Martinez Hays', 'dignissim.magna.a@dolorvitae.org', '2012-08-22', '75278965048',1),
 (3, 'Aladdin Curry French', 'eu.augue@eutemporerat.org', '2012-10-28', '10376915676',1),
@@ -35,18 +51,18 @@ INSERT INTO `clientes` (`id`, `nome`, `email`, `data_nasc`, `cpf`,`user_id`) VAL
 (22, 'Whitney Mack Lamb', 'quam.Curabitur.vel@PraesentluctusCurabitur.org', '2012-06-26', '52403407001',2),
 (23, 'Myra Mcmahon Valentine', 'ac.mi@fringillami.edu', '2012-07-27', '42961419194',2);
 
-CREATE TABLE IF NOT EXISTS `funcionarios` (
+CREATE TABLE IF NOT EXISTS `employees` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` char(45) NOT NULL,
+  `name` char(45) NOT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `cpf` char(11) DEFAULT NULL,
-  `data_nasc` date DEFAULT NULL,
+  `security` char(11) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
   `obs` text NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `funcionarios` (`id`, `nome`, `email`, `cpf`, `data_nasc`, `obs`) VALUES
+INSERT INTO `employees` (`id`, `name`, `email`, `security`, `birthday`, `obs`) VALUES
 (1, 'Ivan Wall Robertson', 'magna.Lorem.ipsum@luctus.edu', '46823319670', '2014-01-08', ''),
 (2, 'Indigo Richards Ware', 'eget.magna@urna.edu', '21315293094', '2013-06-15', ''),
 (3, 'Andrew Hines Carver', 'semper.pretium.neque@mollisvitae.ca', '58552347071', '2013-02-09', ''),
@@ -148,16 +164,16 @@ INSERT INTO `funcionarios` (`id`, `nome`, `email`, `cpf`, `data_nasc`, `obs`) VA
 (99, 'Orli Moon Griffith', 'amet@eu.edu', '27274104666', '2013-10-07', ''),
 (100, 'Selma Cummings Wong', 'at.nisi@mifringilla.edu', '35332973805', '2013-11-04', '');
 
-CREATE TABLE IF NOT EXISTS `produtos` (
+CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descricao` varchar(100) NOT NULL,
-  `unidade` char(4) NOT NULL,
-  `data_cadastro` datetime NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `unity` char(4) NOT NULL,
+  `date` datetime NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `produtos` (`id`, `descricao`, `unidade`, `data_cadastro`,`user_id`) VALUES
+INSERT INTO `products` (`id`, `description`, `unity`, `date`,`user_id`) VALUES
 (1, 'Sed nulla ante,', 'VCO', '2012-11-10 11:54:17',1),
 (2, 'dictum. Proin eget', 'LQO', '2012-06-25 13:23:55',1),
 (3, 'In nec orci.', 'OKK', '2014-05-05 14:07:16',1),
@@ -182,68 +198,10 @@ INSERT INTO `produtos` (`id`, `descricao`, `unidade`, `data_cadastro`,`user_id`)
 (22, 'sed orci lobortis', 'ZLW', '2013-06-17 12:00:33',2),
 (23, 'et ipsum cursus', 'MDZ', '2013-09-30 12:25:46',2);
 
-CREATE TABLE IF NOT EXISTS `pedidos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cliente_id` int(11) NOT NULL,
-  `funcionario_id` int(11) NOT NULL,
-  `produto_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `data` date NOT NULL,
-  `quantidade` int(11) NOT NULL,
-  `preco` decimal(12,2) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `cliente_id` (`cliente_id`),
-  KEY `funcionario_id` (`funcionario_id`),
-  KEY `produto_id` (`produto_id`),
-  KEY `user_id` (`user_id`)
-);
+ALTER TABLE `customers`
+  ADD CONSTRAINT `customers2_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
-INSERT INTO `pedidos` (`id`, `cliente_id`, `funcionario_id`, `produto_id`, `user_id`, `data`, `quantidade`, `preco`) VALUES
-(1, 8, 29, 20,1, '2012-06-19', 16, 52),
-(2, 19, 39, 14,1, '2013-07-23', 8, 66),
-(3, 6, 68, 11,1, '2012-12-09', 12, 36),
-(4, 13, 40, 14,1, '2012-12-16', 12, 114),
-(5, 12, 73, 16,1, '2012-09-13', 3, 83),
-(6, 15, 8, 11,1, '2012-07-26', 11, 52),
-(7, 18, 60, 14,1, '2012-11-12', 4, 65),
-(8, 18, 96, 18,1, '2012-11-08', 1, 58),
-(9, 18, 7, 19,1, '2014-05-15', 16, 88),
-(10, 17, 30, 4,1, '2013-04-06', 18, 110),
-(11, 17, 41, 12,1, '2013-07-09', 19, 79),
-(12, 21, 57, 12,1, '2012-11-25', 13, 38),
-(13, 17, 48, 19,2, '2013-05-31', 8, 88),
-(14, 18, 17, 10,2, '2013-01-25', 18, 46),
-(15, 12, 3, 15,2, '2012-12-06', 19, 102),
-(16, 19, 97, 10,2, '2012-08-25', 19, 108),
-(17, 19, 89,18,2, '2012-12-31', 12, 103),
-(18, 12, 80, 18,2, '2013-01-31', 9, 66),
-(19, 17, 30, 18,2, '2013-03-23', 4, 92),
-(20, 13, 23, 16,2, '2012-12-06', 3, 37),
-(21, 4, 4, 11,2, '2013-09-05', 6, 115),
-(22, 11, 17, 11,2, '2012-06-09', 1, 38),
-(23, 17, 100, 18,2, '2013-09-07', 1, 83),
-(24, 19, 86, 19,3, '2012-07-02', 4, 55),
-(25, 19, 62, 18,3, '2013-10-22', 14, 99),
-(26, 16, 19, 10,3, '2012-07-04', 3, 57),
-(27, 8, 14, 15,3, '2013-03-26', 4, 67),
-(28, 18, 10, 19,3, '2013-12-26', 4, 39),
-(29, 18, 96, 10,3, '2014-01-20', 13, 120),
-(30, 19, 43, 15,3, '2012-11-28', 2, 82),
-(31, 14, 87, 20,3, '2012-09-21', 15, 78),
-(32, 17, 97, 13,3, '2013-03-13', 20, 36),
-(33, 3, 5, 22,3, '2013-02-18', 8, 50),
-(34, 13, 65, 13,3, '2014-02-15', 5, 105),
-(35, 13, 88, 19,3, '2012-08-09', 11, 77);
+ALTER TABLE `products`
+  ADD CONSTRAINT `product_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `cliente2_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
-ALTER TABLE `produtos`
-  ADD CONSTRAINT `produto_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
-ALTER TABLE `pedidos`
-  ADD CONSTRAINT `pedidos_fk1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`id`),
-  ADD CONSTRAINT `pedidos_fk2` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionarios` (`id`),  
-  ADD CONSTRAINT `pedidos_fk4` FOREIGN KEY (`produto_id`) REFERENCES `produtos` (`id`),
-  ADD CONSTRAINT `pedidos_fk3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
