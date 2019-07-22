@@ -1,4 +1,4 @@
-# CRUD Automático
+# Aplicativo Automático em PHP
 
 ## In English
 ![](../images/en.png) https://github.com/ribafs/auto-app/tree/master/en
