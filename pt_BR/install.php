@@ -13,7 +13,6 @@
 
 <div class="jumbotron text-center">
   <h1>Aplicativo Automático em PHP</h1>
-  <h3>Por <a href="https://ribafs.org">RibaFS</a></h3> 
 </div>
 
 <div class="container">
@@ -44,7 +43,7 @@
   </form>
   </div>
 </div>
-
+  <div align="center">Por <a href="https://ribafs.org">RibaFS</a></div> 
 </body>
 </html>
 
