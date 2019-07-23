@@ -32,7 +32,7 @@ https://github.com/ribafs/auto-app/archive/master.zip
 ## Installation
 
 - Make download and uncompress in your web directory. Example: /var/www/html/auto-app or c:\xampp\htdocs\auto-app
-- Create a database, import script sample.sql or use a existing database
+- Create a database, import script db.sql or use a existing database
 - Call by browser with - http://localhost/auto-app
 - It will open the form for entering the data of the bank, as below:
 
