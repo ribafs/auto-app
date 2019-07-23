@@ -12,8 +12,7 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1>PHP Automatic Application</h1>
-  <h3>By <a href="https://ribafs.org">RibaFS</a></h3> 
+  <h1>PHP Automatic Application</h1>  
 </div>
 
 <div class="container">
@@ -45,6 +44,7 @@
   </div>
 </div>
 
+	<div align="center">By <a href="https://ribafs.org">RibaFS</a></div> 
 </body>
 </html>
 
