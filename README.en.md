@@ -1,7 +1,7 @@
 # PHP Automatic Application
 
 ## Em Português
-![](../images/brasil.png) https://github.com/ribafs/auto-app/tree/master/pt_BR
+![](assets/images/brasil.png) https://github.com/ribafs/auto-app/tree/master/pt_BR
 
 Are only two classes, Connection() and Crud() with good methods and the basic files from CRUD. You will not have to type any field names and no lines of code.
 It will automatically generate the code of a CRUD for each table in the database, no matter how many.
@@ -36,16 +36,16 @@ https://github.com/ribafs/auto-app/archive/master.zip
 - Call by browser with - http://localhost/auto-app
 - It will open the form for entering the data of the bank, as below:
 
-![](../images/form.png)
+![](assets/images/form.png)
 
 - Enter the database info and click in Send.
 - Then you will already be in front of the menu with links to all database tables, as the screen below
 
-![](../images/menu.png)
+![](assets/images/menu.png)
 
 Select a table clicking in your link to access your CRUD, as the screen below
 
-![](../images/crud.png)
+![](assets/images/crud.png)
 
 Now try and see anothers features.
 
