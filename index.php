@@ -9,9 +9,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<?php langHelper::showHtmlLang(); ?>
 <head>
-  <title><?php echo SYSTEM_NAME.' - v'.SYSTEM_VERSION ?></title>
+  <title><?php langHelper::showNameVersion(); ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -32,3 +32,4 @@ if( $stepZero && $langEn ) {
   langHelper::setLang($lang);
   var_dump(langHelper::getLang());
 }
+require_once __DIR__.'/footer.php';

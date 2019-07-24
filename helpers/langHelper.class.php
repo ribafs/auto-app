@@ -17,12 +17,31 @@ class langHelper {
     public static function getMsg($keyMsg)
     {
         $lang = self::getLang();
-        require_once __DIR__.'/../lang/'.$lang.'.php';
-
-        $keyExist = array_key_exists($keyMsg, $msg);
+        require __DIR__.'/../lang/'.$lang.'.php';
+        $keyExist = array_key_exists($keyMsg, $msgList);
+        $text = null;
         if($keyExist){
-
+            $text = $msgList[$keyMsg];
         }
-        return $lang;
+        return $text;
     }
+
+    public static function showMsg($keyMsg)
+    {
+        $msg = self::getMsg($keyMsg);
+        echo $msg;
+    }
+
+    public static function showHtmlLang()
+    {
+        $lang = self::getLang();
+        echo '<html lang="'.$lang.'">';
+    }
+
+    public static function showNameVersion()
+    {
+        $name = self::getMsg('APP-TITLE');
+        echo $name.' - v'.SYSTEM_VERSION;
+    }
+
 }
