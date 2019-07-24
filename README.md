@@ -1,4 +1,4 @@
-# Simple PHP Automatic Application
+# Simple Automatic Application in PHP
 ## Create applications without code
 
 This software automates the creation of simple applications in PHP with good resources.
