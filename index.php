@@ -1,56 +1,43 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PHP Automatic Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-if(!file_exists('./classes/connection.php')){
-    header('location: install.php');
-}
-
-require_once('./header.php');
-require_once('./classes/connection.php');
-$conn = new Connection();
-
-$nrtables = count($conn->tableNames());
-$sel = 'Select a Table';
-?>
-
-<br><br><br>
-<style>
-hr{
-    display:none;
-}
-</style>
-<div class="container cabecalho">
-    <h1 align="center">PHP Automatic Application</h1>
+<div class="jumbotron text-center">
+  <h1>PHP Automatic Application</h1>  
 </div>
-	<div align="center">
-		<h3><?php if($nrtables > 0) print $sel; ?></h3>
-		<h4>
-        <br>
-<?php
 
-if($nrtables > 0){
-    for($x=0;$x < $nrtables;$x++){
-        // Nome da tabela
-        $table = $conn->tableNames()[$x];
-
-        //if($table != 'tableName') continue;// Work only with one table with tableName
-
-        // Copiar pasta core para cada tabela
-        if(!file_exists($table)){
-            $conn->copyDir('core',$table);
-        }
-    ?>
-            <!-- Link para cada tabela -->    
-		    <a href="<?=$conn->tableNames()[$x]?>?table=<?=$table?>"><?=ucfirst($table)?></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <?php 
-    }
-		print '<br><br><h4><a href="help.pdf" target="_blank">Help</a></h4>';
-}else{
-    print "<h3>None table found!</h3>";
-}
-?>
-		</h4>
-	</div>
+<div class="container">
+  <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+  <h2>Choose your language</h2>
+  <form method="POST" action="">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="en-us" value="en-us">
+        <label class="form-check-label" for="en-us">
+            English - <img src="assets/images/en.png" alt="Flag en" />
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="pt-br" value="pt-br" checked>
+        <label class="form-check-label" for="pt-br">
+            Brazilian Portuguese - <img src="assets/images/brasil.png" alt="Flag Brazil" />
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+  </form>
+  </div>
 </div>
-<br><br><br>
-<?php require_once('./footer.php'); ?>
 
+	<div align="center">By <a href="https://ribafs.org">RibaFS</a></div> 
+</body>
+</html>
