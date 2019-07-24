@@ -1,13 +1,12 @@
 <?php
+$host = ArrayHelper::get($_POST,'host');
+if($host){
 
-if(isset($_POST['host'])){
-
-$host = $_POST['host'];
-$db = $_POST['db'];
-$user = $_POST['user'];
-$pass = $_POST['pass'];
-$sgbd = $_POST['sgbd'];
-$port = $_POST['port'];
+$db   = ArrayHelper::get($_POST,'db');
+$user = ArrayHelper::get($_POST,'user');
+$pass = ArrayHelper::get($_POST,'pass');
+$sgbd = ArrayHelper::get($_POST,'dbms');
+$port = ArrayHelper::get($_POST,'port');
 
 $content = "<?php
 
@@ -41,6 +40,6 @@ class Connection
         exit();
     }
 
-    header('location: index.php');
+    //header('location: index.php');
 }
 ?>
