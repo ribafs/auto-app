@@ -4,6 +4,7 @@
   <div class="col-sm-6">
   <h2>Choose your language</h2>
   <form method="POST" action="">
+    <input type="hidden" id="formid" name="formid" value="language">
     <div class="form-check">
         <input class="form-check-input" type="radio" name="language" id="en-us" value="en-us">
         <label class="form-check-label" for="en-us">

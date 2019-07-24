@@ -23,11 +23,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 <?php
 require_once __DIR__.'/jumbotron.php';
 
-$stepZero = ( stepHelper::getStep() == 0 );
-$langEn   = ( ArrayHelper::get($_REQUEST,'language') == null );
-if( $stepZero && $langEn ) {
+$formId = ArrayHelper::get($_REQUEST,'formid');
+if( $formId == null ) {
   require_once __DIR__.'/step00.php';
-} else{
+} elseif( $formId == 'language' ){
   $lang = ArrayHelper::get($_REQUEST,'language');
   langHelper::setLang($lang);
   stepHelper::setStep(1);

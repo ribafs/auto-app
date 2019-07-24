@@ -4,6 +4,7 @@
   <div class="col-sm-6">
   <h2><?php langHelper::showMsg('BD-INFO'); ?></h2>
   <form method="POST" action="">
+  <input type="hidden" id="formid" name="formid" value="database">
     <div class="form-group">
       <input type="text" class="form-control" id="host" name="host" value="localhost" required>
     </div>
@@ -22,7 +23,7 @@
     <div class="form-group">
       <input type="text" class="form-control" id="port" name="port" value="3306">
     </div>
-    <button type="submit" class="btn btn-primary"><?php langHelper::showMsg('SUBMIT'); ?></button>
+    <button type="submit" class="btn btn-primary"><?php langHelper::showMsg('BTN-SUBMIT'); ?></button>
   </form>
   </div>
 </div>
