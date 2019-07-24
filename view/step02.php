@@ -42,6 +42,6 @@ class Connection
         exit();
     }
 
-    //header('location: index.php');
+    header('location: index.php');
 }
 ?>

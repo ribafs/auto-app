@@ -1,9 +1,4 @@
 <?php
-
-if(!file_exists('./classes/connection.php')){
-    header('location: install.php');
-}
-
 require_once('./view/header.php');
 require_once('./classes/connection.php');
 $conn = new Connection();
@@ -51,5 +46,5 @@ if($nrtables > 0){
 	</div>
 </div>
 <br><br><br>
-<?php require_once('./footer.php'); ?>
+<?php require_once('./view/footer.php'); ?>
 
