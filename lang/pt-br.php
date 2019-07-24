@@ -9,6 +9,7 @@ $msgList['ADAPTED']   = 'Criado por';
 $msgList['BD-INFO']   = 'Entre informações sobre o banco de dados';
 $msgList['BD-NAME']   = 'Enter nome do banco';
 $msgList['BD-PASS']   = 'Entre a password'; 
+$msgList['BD-DBMS']   = 'Escolha o SGBD'; 
 
 $msgList['BTN-BACK']   = 'Voltar'; 
 $msgList['BTN-SUBMIT'] = 'Enviar'; 
