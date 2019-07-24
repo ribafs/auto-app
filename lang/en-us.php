@@ -1,6 +1,10 @@
 <?php
 
 $msgList = array();
+$msgList['ERROR-KEY-LANG'] = 'Language parameter does exist';
+
 $msgList['APP-TITLE'] = 'PHP Automatic Application';
 $msgList['YOU-DB']    = 'Enter your database details';
 $msgList['ADAPTED']   = 'Adapted by';
+$msgList['BD-INFO']   = 'Enter your database details'; 
+$msgList['BD-NAME']   = 'Enter database name'; 

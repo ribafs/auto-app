@@ -22,6 +22,9 @@ class langHelper {
         $text = null;
         if($keyExist){
             $text = $msgList[$keyMsg];
+        }else{
+            $msg = self::getMsg('ERROR-KEY-LANG');
+            throw new InvalidArgumentException($msg.' key: '.$keyMsg);
         }
         return $text;
     }

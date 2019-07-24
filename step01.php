@@ -1,56 +1,28 @@
-<?php
-
-if(!file_exists('./classes/connection.php')){
-    header('location: install.php');
-}
-
-require_once('./header.php');
-require_once('./classes/connection.php');
-$conn = new Connection();
-
-$nrtables = count($conn->tableNames());
-$sel = 'Select a Table';
-?>
-
-<br><br><br>
-<style>
-hr{
-    display:none;
-}
-</style>
-<div class="container cabecalho">
-    <h1 align="center">PHP Automatic Application</h1>
+<div class="container">
+  <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+  <h2><?php langHelper::showMsg('BD-INFO'); ?></h2>
+  <form method="POST" action="">
+    <div class="form-group">
+      <input type="text" class="form-control" id="host" name="host" value="localhost" required>
+    </div>
+    <div class="form-group">
+      <input type="test" class="form-control" id="db" placeholder="<?php langHelper::showMsg('BD-NAME'); ?>" name="db" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="user" name="user" value="root" required>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+    </div>
+    <div class="form-group">
+      <input type="sgbd" class="form-control" id="sgbd" name="sgbd" value="mysql">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="port" name="port" value="3306">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
 </div>
-	<div align="center">
-		<h3><?php if($nrtables > 0) print $sel; ?></h3>
-		<h4>
-        <br>
-<?php
-
-if($nrtables > 0){
-    for($x=0;$x < $nrtables;$x++){
-        // Nome da tabela
-        $table = $conn->tableNames()[$x];
-
-        //if($table != 'tableName') continue;// Work only with one table with tableName
-
-        // Copiar pasta core para cada tabela
-        if(!file_exists($table)){
-            $conn->copyDir('core',$table);
-        }
-    ?>
-            <!-- Link para cada tabela -->    
-		    <a href="<?=$conn->tableNames()[$x]?>?table=<?=$table?>"><?=ucfirst($table)?></a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <?php 
-    }
-		print '<br><br><h4><a href="help.pdf" target="_blank">Help</a></h4>';
-}else{
-    print "<h3>None table found!</h3>";
-}
-?>
-		</h4>
-	</div>
-</div>
-<br><br><br>
-<?php require_once('./footer.php'); ?>
-
