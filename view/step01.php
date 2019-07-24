@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
       <label for="dbms"><?php langHelper::showMsg('BD-DBMS'); ?></label>
-      <select class="form-control" id="dbms" required>
+      <select class="form-control" id="dbms" name="dbms">
         <option value="mysql">MySQL</option>
         <option value="pgsql">PostgreSQL</option>
         <option value="sqlite">SqLite</option>

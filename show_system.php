@@ -4,7 +4,7 @@ if(!file_exists('./classes/connection.php')){
     header('location: install.php');
 }
 
-require_once('./header.php');
+require_once('./view/header.php');
 require_once('./classes/connection.php');
 $conn = new Connection();
 $nrtables = count($conn->tableNames());

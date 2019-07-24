@@ -1,4 +1,6 @@
 <?php
+var_dump($_REQUEST);
+
 $host = ArrayHelper::get($_POST,'host');
 if($host){
 
