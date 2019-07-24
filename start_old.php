@@ -7,7 +7,6 @@ if(!file_exists('./classes/connection.php')){
 require_once('./header.php');
 require_once('./classes/connection.php');
 $conn = new Connection();
-
 $nrtables = count($conn->tableNames());
 $sel = 'Select a Table';
 ?>

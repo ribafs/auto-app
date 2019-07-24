@@ -7,19 +7,19 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   $_SESSION[SYSTEM_ACRONYM]['step']=0;
 }
 
-require_once __DIR__.'/header.php';
-require_once __DIR__.'/jumbotron.php';
+require_once __DIR__.'/view/header.php';
+require_once __DIR__.'/view/jumbotron.php';
 
 $formId = ArrayHelper::get($_REQUEST,'formid');
 if( $formId == null ) {
-  require_once __DIR__.'/step00.php';
+  require_once __DIR__.'/view/step00.php';
 } elseif( $formId == 'language' ){
   $lang = ArrayHelper::get($_REQUEST,'language');
   langHelper::setLang($lang);
   stepHelper::setStep(1);
-  require_once __DIR__.'/step01.php';
+  require_once __DIR__.'/view/step01.php';
 }else{  
   stepHelper::setStep(2);
-  require_once __DIR__.'/step02.php';
+  require_once __DIR__.'/view/step02.php';
 }
-require_once __DIR__.'/footer.php';
+require_once __DIR__.'/view/footer.php';
