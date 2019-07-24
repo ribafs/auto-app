@@ -1,7 +1,11 @@
+<?php
+require_once __DIR__.'/load_files.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PHP Automatic Application</title>
+  <title><?php echo SYSTEM_NAME.' - v'.SYSTEM_VERSION ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,7 +16,7 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1>PHP Automatic Application</h1>  
+  <h1><?php echo SYSTEM_NAME.' - v'.SYSTEM_VERSION ?></h1>  
 </div>
 
 <div class="container">
