@@ -1,7 +1,13 @@
 <?php
 
 class langHelper {
+    public const EN = 'en-su';
 
+    public static function setLang($lang)
+    {
+        $_SESSION[SYSTEM_ACRONYM]['lang'] = $lang;
+    }
+    
     public static function getLang()
     {
         $lang = $_SESSION[SYSTEM_ACRONYM]['lang'];

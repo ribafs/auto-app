@@ -6,6 +6,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   $_SESSION[SYSTEM_ACRONYM]['lang']='en-us';
   $_SESSION[SYSTEM_ACRONYM]['step']=0;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +22,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 <body>
 <?php
 require_once __DIR__.'/jumbotron.php';
-require_once __DIR__.'/step00.php';
-require_once __DIR__.'/footer.php';
 
-var_dump($_REQUEST);
-var_dump(langHelper::getLang());
+$stepZero = ( stepHelper::getStep() == 0 );
+$langEn   = ( ArrayHelper::get($_REQUEST,'language') == null );
+if( $stepZero && $langEn ) {
+  require_once __DIR__.'/step00.php';
+} else{
+  $lang = ArrayHelper::get($_REQUEST,'language');
+  langHelper::setLang($lang);
+  var_dump(langHelper::getLang());
+}
