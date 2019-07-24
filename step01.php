@@ -14,7 +14,7 @@
       <input type="text" class="form-control" id="user" name="user" value="root" required>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+      <input type="password" class="form-control" id="pass" placeholder="<?php langHelper::showMsg('BD-PASS'); ?>" name="pass">
     </div>
     <div class="form-group">
       <input type="sgbd" class="form-control" id="sgbd" name="sgbd" value="mysql">
@@ -22,7 +22,7 @@
     <div class="form-group">
       <input type="text" class="form-control" id="port" name="port" value="3306">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary"><?php langHelper::showMsg('SUBMIT'); ?></button>
   </form>
   </div>
 </div>
