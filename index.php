@@ -17,7 +17,9 @@ if( $formId == null ) {
   $lang = ArrayHelper::get($_REQUEST,'language');
   langHelper::setLang($lang);
   stepHelper::setStep(1);
-  var_dump(langHelper::getLang());
   require_once __DIR__.'/step01.php';
+}else{  
+  stepHelper::setStep(2);
+  require_once __DIR__.'/step02.php';
 }
 require_once __DIR__.'/footer.php';
