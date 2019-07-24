@@ -1,6 +1,11 @@
 <?php
 require_once __DIR__.'/load_files.php';
-
+if (session_status() !== PHP_SESSION_ACTIVE) {
+  session_cache_expire(60);
+  session_start();
+  $_SESSION[SYSTEM_ACRONYM]['lang']='en-us';
+  $_SESSION[SYSTEM_ACRONYM]['step']=0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,34 +19,10 @@ require_once __DIR__.'/load_files.php';
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<?php
+require_once __DIR__.'/jumbotron.php';
+require_once __DIR__.'/step00.php';
+require_once __DIR__.'/footer.php';
 
-<div class="jumbotron text-center">
-  <h1><?php echo SYSTEM_NAME.' - v'.SYSTEM_VERSION ?></h1>  
-</div>
-
-<div class="container">
-  <div class="row">
-  <div class="col-sm-3"></div>
-  <div class="col-sm-6">
-  <h2>Choose your language</h2>
-  <form method="POST" action="">
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="en-us" value="en-us">
-        <label class="form-check-label" for="en-us">
-            English - <img src="assets/images/en.png" alt="Flag en" />
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="pt-br" value="pt-br" checked>
-        <label class="form-check-label" for="pt-br">
-            Brazilian Portuguese - <img src="assets/images/brasil.png" alt="Flag Brazil" />
-        </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Next</button>
-  </form>
-  </div>
-</div>
-
-	<div align="center">By <a href="https://ribafs.org">RibaFS</a></div> 
-</body>
-</html>
+var_dump($_REQUEST);
+var_dump(langHelper::getLang());
