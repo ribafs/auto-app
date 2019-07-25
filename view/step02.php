@@ -9,7 +9,13 @@ $user = ArrayHelper::get($_POST,'user');
 $pass = ArrayHelper::get($_POST,'pass');
 $sgbd = ArrayHelper::get($_POST,'dbms');
 $port = ArrayHelper::get($_POST,'port');
+$_SESSION[SYSTEM_ACRONYM]['GEN_SYSTEM_ACRONYM'] = ArrayHelper::get($_POST,'GEN_SYSTEM_ACRONYM');
 
+TGeneratorHelper::createRootDirNewApp();
+TGeneratorHelper::copySystemSkeletonToNewSystem();
+
+
+/*
 $content = "<?php
 
 class Connection
@@ -43,5 +49,6 @@ class Connection
     }
 
     header('location: index.php');
+    */
 }
 ?>
