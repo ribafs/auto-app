@@ -2,9 +2,13 @@
     padding-top: 5px;
 }
 
-.footer{
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    vertical-align: middle;
     background-color:#e6e6e6;
-    width:85%;
     font-size:11px;
     text-align:center;
 }
