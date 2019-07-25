@@ -1,10 +1,22 @@
 <div class="container">
   <div class="row">
   <div class="col-sm-3"></div>
-  <div class="col-sm-6">
-  <h2><?php langHelper::showMsg('BD-INFO'); ?></h2>
+  <div class="col-sm-6">  
   <form method="POST" action="">
     <input type="hidden" id="formid" name="formid" value="database">
+    
+    <h2><?php langHelper::showMsg('NEW-APP-TITLE'); ?></h2>
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="GEN_SYSTEM_ACRONYM" name="GEN_SYSTEM_ACRONYM" placeholder="<?php langHelper::showMsg('NEW-APP-DIR'); ?>" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="GEN_SYSTEM_VERSION" name="GEN_SYSTEM_VERSION" placeholder="<?php langHelper::showMsg('NEW-APP-VER'); ?>" value="0.0.0" required>
+    </div>    
+
+    <h2><?php langHelper::showMsg('BD-INFO'); ?></h2>
+    
     <div class="form-group">
       <input type="text" class="form-control" id="host" name="host" value="localhost" required>
     </div>
