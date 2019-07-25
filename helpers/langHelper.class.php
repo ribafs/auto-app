@@ -10,14 +10,22 @@ class langHelper {
     
     public static function getLang()
     {
-        $lang = $_SESSION[SYSTEM_ACRONYM]['lang'];
+        $lang = 'en-us';
+        if (ArrayHelper::has(SYSTEM_ACRONYM, $_SESSION)){
+            $lang = $_SESSION[SYSTEM_ACRONYM]['lang'];
+        }
         return $lang;
     }
 
     public static function getMsg($keyMsg)
     {
         $lang = self::getLang();
-        require __DIR__.'/../lang/'.$lang.'.php';
+        $fileLang = __DIR__.'/../lang/'.$lang.'.php';
+        if( file_exists($fileLang) ){            
+            require $fileLang;
+        }else{
+            throw new InvalidArgumentException('File not found: '.$fileLang);
+        }
         $keyExist = array_key_exists($keyMsg, $msgList);
         $text = null;
         if($keyExist){
