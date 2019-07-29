@@ -65,11 +65,11 @@ https://github.com/ribafs/aplicativos-php
 A construção deste software me adicionou um grande aprendizado de PHP, especialmente sobre os metadados do MySQL e PostgreSQL e sobre a manipulação de strings. Caso seja um programador iniciante ou médio de PHP recomendo que estude o código para aprender os conhecimentos envolvidos.
 Building this software has added me a great learning of PHP, especially on the MySQL and PostgreSQL metadatas and on the string manipulation. 
 
-## Automatic Aplications
+## Automatic CRUD
 
-Using this software I create another proejct and call auto-app, which does this same magic but for all the tables of a bank.
+Using this software I create another proejct and call auto-crud, which does this same magic but only for one table.
 
-https://github.com/ribafs/auto-app
+https://github.com/ribafs/auto-crud
 
 ## Credit
 
@@ -91,3 +91,5 @@ MIT
 - Forks
 - Pull Requests
 
+## Alternative
+To create application full, with support to relationship use Bake from CakePHP.
