@@ -86,3 +86,6 @@ Serão muito bem vindos:
 - Forks
 - Pull Requests
 
+## Alternativa
+
+Para criar um aplicativo completo, inclusive com suporte a relacionamentos use o Bake do [CakePHP](https://cakephp.org).
