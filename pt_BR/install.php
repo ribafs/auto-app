@@ -18,7 +18,7 @@
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-<p>Este software cria o código de um CRUD automaticamente para cada tabela do banco informado no primeiro acesso. Ele tem um código básico (pasta core) que se adapta às tabelas usando funções de metadados do SGBD.</p>
+<p>Este software cria o código de um CRUD automaticamente para cada tabela do banco informado no primeiro acesso. Ele tem um código básico na pasta core que ele copia para cada tabela do banco e adapta para as tabelas usando as funções de metadados do SGBD (na classe Crud()).</p>
     </div>
 </div>
 
