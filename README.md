@@ -3,6 +3,8 @@
 
 This software automates the creation of simple applications in PHP with good resources.
 
+It require write permission to user from webserver in application root.
+
 ## Em Português
 ![](images/brasil.png) https://github.com/ribafs/auto-app/blob/master/pt_BR/README.md
 
