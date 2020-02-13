@@ -14,7 +14,7 @@
 <div class="jumbotron text-center">
   <h1>Aplicativos Automáticos</h1>
   <h3>Por <a href="https://ribafs.org">RibaFS</a></h3>
-  <h5>Crie o banco de dados e importe o script do raiz ou use outro banco existente.</h3>  
+  <h5 style="color: red">Crie o banco de dados e importe o script do raiz ou use outro banco existente.</h3>  
 </div>
 
 <h3 align="center">Como Funciona</h3>
