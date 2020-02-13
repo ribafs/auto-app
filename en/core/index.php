@@ -17,7 +17,7 @@ $totalPages = ceil($rows[0]/$conn->regsPerPage);
 
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading text-center"><h3><b><?=$conn->appName. ' - '. ucfirst($crud->table)?></h3></b></div>
+        <div class="panel-heading text-center"><h3><b><?=$conn->appName. ' - '. ucfirst($crud->table)?></b></h3></a></div>
         <div class="row">
 
             <!-- Adicionar registro -->
