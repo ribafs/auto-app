@@ -14,3 +14,6 @@ https://github.com/ribafs/auto-app/archive/master.zip
 
 ## LICENSE
 MIT
+
+## Similar
+To generate automatic applications with even more features than this auto-app, I recommend using the CakePHP framework bake tool (http://cakephp.org).
