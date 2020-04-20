@@ -29,7 +29,7 @@ https://github.com/ribafs/auto-app
 - Abrirá o formulário para entrada dos dados do banco, como abaixo:
 
 ![](images/form.png)
-
+![](images/form.png)
 - Entre com os dados do banco e com o nome da tabela e clique em Send
 Já estará em frente ao menu com links para todas as tabelas do banco, como a tela abaixo
 
