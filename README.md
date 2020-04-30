@@ -22,7 +22,7 @@ https://github.com/ribafs/auto-app
 - PHP com PDO
 - Paginação de resultados com bootpag
 - Busca integrada
-- BootStrap 4
+- BootStrap 3
 
 ## Instalação:
 
