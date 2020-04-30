@@ -62,6 +62,7 @@ $totalPages = $crud->totalPages();
 <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/jquery.bootpag.min.js" type="text/javascript"></script>
 <script>
+// Sugerido pela equipe do GitHub, juntamente com o jQuery 1.12	
 jQuery.htmlPrefilter = function( html ) {
 	return html;
 };
