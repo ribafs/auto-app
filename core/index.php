@@ -58,15 +58,9 @@ $totalPages = $crud->totalPages();
         </div>
     </div>
 </div>
-<script src="../assets/js/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="../assets/js/jquery-3.5.0.min.js" type="text/javascript"></script>
 <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/jquery.bootpag.min.js" type="text/javascript"></script>
-<script>
-// Sugerido pela equipe do GitHub, juntamente com o jQuery 1.12	
-jQuery.htmlPrefilter = function( html ) {
-	return html;
-};
-</script>
 <script type="text/javascript">
 $(document).ready(function() {
     $("#pg-results").load("fetch_data.php?table=<?=$table?>");
