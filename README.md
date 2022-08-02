@@ -9,6 +9,11 @@ https://github.com/ribafs/auto-app
 ## Capturas do auto-app
 
 ![images/1.png](images/1.png)
+![images/2.png](images/2.png)
+![images/3.png](images/3.png)
+![images/4.png](images/4.png)
+![images/5.png](images/5.png)
+![images/busca.png](images/busca.png)
 
 ## Requisitos:
 
