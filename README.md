@@ -67,10 +67,15 @@ https://github.com/ribafs/aplicativos-php
 
 A construção deste software me adicionou um grande aprendizado de PHP, especialmente sobre os metadados do MySQL e PostgreSQL e sobre a manipulação de strings. Caso seja um programador iniciante ou médio de PHP recomendo que estude o código para aprender os conhecimentos envolvidos.
 
-## CRUD Automático
+## Projetos similares
 
-Tenho também o auto-crud, que faz esta mesma mágica mas somente para uma única tabela de um banco.
 https://github.com/ribafs/auto-crud
+https://github.com/ribafs/crud-generator
+https://github.com/ribafs/no-code-listing
+https://github.com/ribafs/crud-generator-laravel-br
+https://github.com/ribafs/view-maker
+https://github.com/ribafs/laravel-acl
+Entre outros
 
 ## Alerta
 Lembre que o aplicativo gerado é algo simples, sem suporte nativo a relacionamentos e outras limitações. Imagino que possa ser util, especialmente como aprendizado do código usado.
