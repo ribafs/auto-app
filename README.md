@@ -12,15 +12,20 @@ https://github.com/ribafs/auto-app
 ## Capturas do auto-app
 
 ![images/0.png](images/0.png)
-<hr>
+
+
 ![images/1.png](images/1.png)
-<hr>
+
+
 ![images/2.png](images/2.png)
-<hr>
+
+
 ![images/3.png](images/3.png)
-<hr>
+
+
 ![images/4.png](images/4.png)
-<hr>
+
+
 ![images/5.png](images/5.png)
 
 ### Busca
