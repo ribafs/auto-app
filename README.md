@@ -2,16 +2,25 @@
 
 Temos apenas duas classes, Connection() e Crud() com bons métodos e os arquivos básicos do CRUD em core. Você não precisará digitar nenhum nome de campo e nenhuma linha de código. Ele gerará automaticamente o código de um CRUD para cada tabela do banco de dados, não importando quantas sejam.
 
+## no-code
+Esta é uma ferramenta que há algum tempo se chama de RAD (Rapid Application Developer) e atualmente se chama de no-code, pois podemos criar aplicativos para qualquer banco, com qualquer quantidade de tabelas automaticamente e sem uma única linha de código.
+
 ## URL deste projeto
 
 https://github.com/ribafs/auto-app
 
 ## Capturas do auto-app
 
+![images/0.png](images/0.png)
+<hr>
 ![images/1.png](images/1.png)
+<hr>
 ![images/2.png](images/2.png)
+<hr>
 ![images/3.png](images/3.png)
+<hr>
 ![images/4.png](images/4.png)
+<hr>
 ![images/5.png](images/5.png)
 
 ### Busca
@@ -36,20 +45,8 @@ https://github.com/ribafs/auto-app
 ## Instalação:
 
 - Faça o download e descompacte no diretório web. Exemplo: /var/www/html/auto-app ou c:\xampp\htdocs\auto-app
-- Crie o banco de dados ou use um existente
+- Crie o banco de dados e importe o script db.sql ou use um banco existente
 - E chame pelo navegador com - http://localhost/auto-app
-- Abrirá o formulário para entrada dos dados do banco, como abaixo:
-
-![](images/form.png)
-
-- Entre com os dados do banco e com o nome da tabela e clique em Send
-Já estará em frente ao menu com links para todas as tabelas do banco, como a tela abaixo
-
-![](images/menu.png)
-
-Clique em um link para ver o CRUD completo para a tabela selecionada:
-
-![](images/crud.png)
 
 ## Origem
 
@@ -69,6 +66,9 @@ A construção deste software me adicionou um grande aprendizado de PHP, especia
 
 Tenho também o auto-crud, que faz esta mesma mágica mas somente para uma única tabela de um banco.
 https://github.com/ribafs/auto-crud
+
+## Alerta
+Lembre que o aplicativo gerado é algo simples, sem suporte nativo a relacionamentos e outras limitações. Imagino que possa ser util, especialmente como aprendizado do código usado.
 
 ## Créditos
 
