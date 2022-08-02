@@ -69,12 +69,12 @@ A construção deste software me adicionou um grande aprendizado de PHP, especia
 
 ## Projetos similares
 
-https://github.com/ribafs/auto-crud
-https://github.com/ribafs/crud-generator
-https://github.com/ribafs/no-code-listing
-https://github.com/ribafs/crud-generator-laravel-br
-https://github.com/ribafs/view-maker
-https://github.com/ribafs/laravel-acl
+- https://github.com/ribafs/auto-crud
+- https://github.com/ribafs/crud-generator
+- https://github.com/ribafs/no-code-listing
+- https://github.com/ribafs/crud-generator-laravel-br
+- https://github.com/ribafs/view-maker
+- https://github.com/ribafs/laravel-acl
 Entre outros
 
 ## Alerta
